@@ -116,10 +116,10 @@ if [ "$(grep "Following Updates are applicable" $rumlog)" ] ; then
   -icon "$icons/ToolbarInfo.icns" -description "Do you want to install these updates?
 
 $secho" -button1 "Yes" -button2 "No")
-    if [ "$userChoice" == "0" ]; then
+    if [[ "$userChoice" == "0" ]]; then
         echo "User said yes, installing $secho"
         installUpdates
-    elif [ "$userChoice" == "2" ]; then
+    elif [[ "$userChoice" == "2" ]]; then
         echo "User said no"
         exit 0
     fi
